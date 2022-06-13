@@ -1,0 +1,89 @@
+# Group of 1
+- TeamHikingSim:
+  # Slow leader
+  Group: [1]
+  Bridges:
+  - Length: 10
+    Hikers: []  # 10
+  - Length: 10  
+    Hikers: [2] # 10
+  - Length: 10
+    Hikers: [5] # 10
+  - Length: 10
+    Hikers: [2, 5] # (10+10) + 10 
+  # Fast leader
+  - Length: 10
+    Hikers: [0.5] # 20
+  - Length: 10
+    Hikers: [0.3, 1] # (33.(3)+10) + 1*10 
+    # Mixed hikers speed vs leader
+  - Length: 10
+    Hikers: [0.3, 1, 2] # (33.(3)+10 + 10) + 2*10 
+
+# Group of 2: 
+- TeamHikingSim:
+  # Slow leader
+  Group: [0.5, 1]
+  Bridges:
+  - Length: 10
+    Hikers: []  # 20 = (20)
+  - Length: 10  
+    Hikers: [2] # 40  = (20 + 10) + 1*10
+  - Length: 10
+    Hikers: [5] # 40 = (20 + 10) + 1*10
+  - Length: 10
+    Hikers: [2, 5] # 60 = (20+10+10) + 2*10 
+  # Mixed hikers speed vs leader
+  - Length: 10
+    Hikers: [0.5] # 50 = (20 + 20) + 1*10
+  - Length: 10
+    Hikers: [0.3, 1] # 83.(3) = (20 + 33.(3)+10) + 2*10 
+  - Length: 10
+    Hikers: [0.3, 1, 2] # 103.(3) = (20 + 33.(3)+10 + 10) + 3*10  
+
+# Group of 3: 
+- TeamHikingSim:
+  # Slow leader
+  Group: [0.2, 0.5, 1]
+  Bridges:
+  - Length: 10
+    Hikers: []  # 80 = (50+20) + 1*10
+  - Length: 10  
+    Hikers: [2] # 100  = (50+20 + 10) + 2*10
+  - Length: 10
+    Hikers: [5] # 100  = (50+20 + 10) + 2*10
+  - Length: 10
+    Hikers: [2, 5] # 120  = (50+20 + 10+10) + 3*10 
+  # Mixed hikers speed vs leader
+  - Length: 10
+    Hikers: [0.5] # 110 = (50+20 + 20) + 2*10
+  - Length: 10
+    Hikers: [0.3, 1] # 143.(3) = (50+20 + 33.(3)+10) + 3*10 
+  - Length: 10
+    Hikers: [0.3, 1, 2] # 163.(3) = (50+20 + 33.(3)+10 + 10) + 4*10
+
+# Group of 4: 
+- TeamHikingSim:
+  # Long bridge, slow leader
+  Group: [0.03]
+  Bridges:
+  - Length: 10 
+    Hikers: []  # 333.(3) = (333.(3)) 
+  - Length: 10  
+    Hikers: [2] # 333.(3) = (333.(3))
+  - Length: 10
+    Hikers: [5] # 333.(3) = (333.(3) ) 
+  - Length: 10
+    Hikers: [2, 5] # 1000 = (333.(3) + 333.(3)) + 1 * 333.(3)
+  # Mixed hikers speed vs leader
+  - Length: 10
+    Hikers: [0.03, 1, 2] # 1666.(6) = (333.(3) + 333.(3)+ 333.(3)) + 2*333.(3)
+  - Length: 10
+    Hikers: [0.003, 1, 2] # 4666.(6) = (3333.(3) + 333.(3)+ 333.(3)) + 2*333.(3)
+
+- TeamHikingSim:
+  # Long bridge, slow leader
+  Group: [0.0001]
+  Bridges:
+  - Length: 1000000 
+    Hikers: []  # 333.(3) = (333.(3)) 

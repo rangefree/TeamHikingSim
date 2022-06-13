@@ -1,0 +1,9 @@
+- TeamHikingSim:
+  Group: [100, 50, 20, 10]
+  Bridges:
+  - Length: 100
+    Hikers: []
+  - Length: 250
+    Hikers: [2.5]
+  - Length: 150
+    Hikers: [25, 15]
